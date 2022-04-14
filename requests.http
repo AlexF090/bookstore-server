@@ -11,6 +11,7 @@ GET http://localhost:3000/martin HTTP/1.1
 POST http://localhost:3000/
 content-type: application/json
 # Posts a book
+
 {
     "title": "Du darfst nicht alles glauben, was du denkst",
     "isbn": "978-3-462-00254-6",
@@ -22,7 +23,7 @@ content-type: application/json
   }
 
 ###
-DELETE http://localhost:3000/6257e8f4c55a8d6d1c4db3bb HTTP/1.1
+DELETE http://localhost:3000/6258595c12c4a93edfee13ce HTTP/1.1
 # Deletes a specific book
 
 ###
