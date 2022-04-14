@@ -1,0 +1,33 @@
+GET http://localhost:3000/ HTTP/1.1
+
+###
+
+GET http://localhost:3000/martin HTTP/1.1
+
+###
+
+POST http://localhost:3000/
+content-type: application/json
+
+{
+    "title": "Du darfst nicht alles glauben, was du denkst",
+    "isbn": "978-3-462-00254-6",
+    "author": "Kurt Kroemer",
+    "description": "Bis zu seinem elften Geburtstag glaubt Harry, er sei ein ganz normaler Junge. Doch dann erfährt er, dass er sich an der Schule für Hexerei und Zauberei einfinden soll - denn er ist ein Zauberer! In Hogwarts stürzt Harry von einem Abenteuer ins nächste und muss gegen Bestien, Mitschüler und Fabelwesen kämpfen. Da ist es gut, dass er schon Freunde gefunden hat, die ihm im Kampf gegen die dunklen Mächte zur Seite stehen.",
+    "published_date": "2022-03-10T23:00:00.000Z",
+    "number_of_pages": 192,
+    "publisher": "Kiepenheuer & Witsch"
+  }
+
+###
+DELETE http://localhost:3000/6257e8f4c55a8d6d1c4db3bb HTTP/1.1
+
+###
+
+PATCH http://localhost:3000/6257e8f4c55a8d6d1c4db3bb HTTP/1.1
+content-type: application/json
+
+{
+    "points": 100,
+    "happiness" : 10
+}
