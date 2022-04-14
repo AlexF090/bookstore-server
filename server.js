@@ -1,13 +1,14 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const Book = require("./models/book.js");
+var cors = require("cors");
 require("dotenv").config();
 
 const { MONGODB_URL } = process.env;
 
 const app = express();
 const port = 3000;
-
+app.use(cors());
 mongoose.connect(MONGODB_URL);
 
 app.use(express.json());
