@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const Book = require("./models/student.js");
+const Book = require("./models/book.js");
 require("dotenv").config();
 
 const { MONGODB_URL } = process.env;
@@ -38,7 +38,7 @@ app.post("/", (req, res) => {
   const number_of_pages = req.body.number_of_pages;
   const publisher = req.body.publisher;
 
-  const newStudent = Book({
+  const newBook = Book({
     title,
     isbn,
     author,
@@ -48,7 +48,7 @@ app.post("/", (req, res) => {
     number_of_pages,
     publisher,
   });
-  newStudent
+  newBook
     .save()
     .then((data) => {
       res.status(201).send(data);

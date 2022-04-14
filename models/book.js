@@ -6,7 +6,7 @@ const bookSchema = mongoose.Schema(
     title: { type: String, required: true },
     isbn: { type: String, required: true },
     author: { type: String, required: true },
-    description: { type: String, required: true },
+    description: { type: String }, //was bringt "required: false"? = default?
     published_date: { type: String, required: true },
     number_of_pages: { type: Number, required: true },
     publisher: { type: String, required: true },
